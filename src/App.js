@@ -14,8 +14,9 @@ class Button extends Component {
 
 	render() {
     return (
-      <button onClick={this.props.onClickFunction}>
-        Increment
+      <button
+        onClick={() => this.props.onClickFunction(this.props.incrementValue)}>
+        +{this.props.incrementValue}
       </button>
     );
   }
@@ -30,9 +31,9 @@ const Result = (props) => {
 class App extends Component {
 	state = { counter: 0 };
 
-  incrementCounter = () => {
+  incrementCounter = (incrementValue) => {
     	this.setState( (prevState) => ({
-    	counter: prevState.counter + 1
+    	counter: prevState.counter + incrementValue
     }) );
   };
 
@@ -47,11 +48,12 @@ class App extends Component {
         <p className="App-intro">
           {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
         </p>
+        <Button incrementValue={1} onClickFunction={this.incrementCounter} />
+        <Button incrementValue={5} onClickFunction={this.incrementCounter} />
+        <Button incrementValue={10} onClickFunction={this.incrementCounter} />
 
-        <p className="App-intro">
-          <Button onClickFunction={this.incrementCounter} />
-          <Result counter={this.state.counter} />
-        </p>
+        {/*<Button onClickFunction={this.incrementCounter} />*/}
+        <Result counter={this.state.counter} />
 
       </div>
 
