@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Card = (props) => {
-  return (
+const Card = (props) => (
     <div>
-      <img src="http://placehold.it/75" alt="card"/>
-      <div>
-        <div>Name here...</div>
-        <div>Company Name here...</div>
+      <img width="75" src="https://avatars2.githubusercontent.com/u/8445?v=3" alt="card"/>
+      <div style={{display: 'inline-block', marginLeft: 10}}>
+        <div style={{fontSize: '1.25em', fontWeight: 'bold'}}>
+          Paul O’Shannessy
+          </div>
+        <div>Facebook</div>
       </div>
     </div>
-  );
-};
+  )
 
 export default Card;
