@@ -3,7 +3,7 @@ import Card from './Card';
 
 const CardList = (props) => (
     <div>
-      <Card />
+      {props.cards.map(card => <Card name={card.name} avatar_url={card.avatar_url} company={card.company} />)}
     </div>
   )
 
