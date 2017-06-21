@@ -60,12 +60,10 @@ class App extends Component {
             <h2>Welcome to React</h2>
           </div>
           <p className="App-intro">
-            { /*To get started, edit <code>src/App.js</code> and save to reload.*/ }
           </p>
           <Button incrementValue={ 1 } onClickFunction={ this.incrementCounter } />
           <Button incrementValue={ 5 } onClickFunction={ this.incrementCounter } />
           <Button incrementValue={ 10 } onClickFunction={ this.incrementCounter } />
-          { /*<Button onClickFunction={this.incrementCounter} />*/ }
           <Result counter={ this.state.counter } />
         </div>
         <div>
