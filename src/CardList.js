@@ -4,9 +4,7 @@ import Form from './Form';
 
 const CardList = (props) => (
   <div>
-    <Form/> {props
-      .cards
-      .map(card => <Card {...card}/>)}
+    { props.cards.map(card => <Card {...card}/>) }
   </div>
 )
 
