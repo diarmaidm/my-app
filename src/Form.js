@@ -1,14 +1,20 @@
 import React from 'react';
 
 class Form extends React.Component {
+  state = {
+    userName: ''
+  }
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Event: Form Submit', this.userNameInput.value);
+    console.log('Event: Form Submit', this.state.userName);
+  // ajax... (fetch or axios)
   }
   render() {
     return (
       <form onSubmit={ this.handleSubmit }>
-        <input type="text" ref={ (input) => this.userNameInput = input } placeholder="Github username" required/>
+        <input type="text" value={ this.state.userName } onChange={ (event) => this.setState({
+                                                                      userName: event.target.value
+                                                                    }) } placeholder="Github username" required/>
         <button type="submit">Add card</button>
       </form>
     )
