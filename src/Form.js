@@ -7,12 +7,11 @@ class Form extends React.Component {
   }
   handleSubmit = (event) => {
     event.preventDefault();
-    // console.log('Event: Form Submit', this.state.userName);
+
     // ajax... (fetch or axios)
     axios
       .get(`https://api.github.com/users/${this.state.userName}`)
       .then(resp => {
-        // console.log(resp.data);
         this.props.onSubmit(resp.data)
         this.setState({userName: ''});
       });

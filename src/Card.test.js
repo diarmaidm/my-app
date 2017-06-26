@@ -1,8 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import {
-  shallow
-} from 'enzyme';
+import { shallow } from 'enzyme';
 import Card from './Card';
 
 describe('<Card />', () => {

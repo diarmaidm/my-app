@@ -18,8 +18,7 @@ class Button extends Component {
       </button>
       );
   }
-}
-;
+};
 
 const Result = (props) => {
   return (
@@ -40,7 +39,6 @@ class App extends Component {
   };
 
   addNewCard = (cardInfo) => {
-    // console.log(cardInfo);
     this.setState(prevState => ({
       cards: prevState.cards.concat(cardInfo)
     }));
