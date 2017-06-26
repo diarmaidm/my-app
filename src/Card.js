@@ -7,7 +7,7 @@ const Card = (props) => (
         <div style={{fontSize: '1.25em', fontWeight: 'bold'}}>
           {props.name}
           </div>
-        <div>Facebook</div>
+        <div>{props.company}</div>
       </div>
     </div>
   )

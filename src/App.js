@@ -30,22 +30,20 @@ const Result = (props) => {
 };
 
 class App extends Component {
+  // jordwalke
+  // zpao
+  // spicyj
+  //
   state = {
     counter: 0,
-    cards: [
-      {
-        key: 1,
-        name: "Paul O’Shannessy",
-        avatar_url: "https://avatars.githubusercontent.com/u/8445?v=3",
-        company: "Facebook"
-      },
-      {
-        key: 2,
-        name: "Ben Alpert",
-        avatar_url: "https://avatars.githubusercontent.com/u/6820?v=3",
-        company: "Facebook"
-      }
-    ]
+    cards: []
+  };
+
+  addNewCard = (cardInfo) => {
+    // console.log(cardInfo);
+    this.setState(prevState => ({
+      cards: prevState.cards.concat(cardInfo)
+    }));
   };
 
   incrementCounter = (incrementValue) => {
@@ -70,7 +68,7 @@ class App extends Component {
           <Result counter={ this.state.counter } />
         </div>
         <div>
-          <Form />
+          <Form onSubmit={this.addNewCard} />
           <CardList cards={ this.state.cards } />
         </div>
       </div>
